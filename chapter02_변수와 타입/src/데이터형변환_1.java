@@ -82,7 +82,21 @@
  *  	   long => int : 파일크기 (long) => int 
  *  	3. 변수 선언
  *  	   데이터형 변수명
- *  
+ *  	   *** 지역변수 => 반드시 초기값을 설정
+ *  	   		 | 메소드 안에서 선언 => 스택 => 메소드 종료시에 자동으로 삭제
+ *  	   => 초기값
+ *  		  명시적 => 직접 값 대입
+ *  		  입력값 => Scanner / BufferedReader
+ *  				  scanf() / input()
+ *  		  난수값 => 임의값 추출
+ *  	   => 같은데이터형
+ *  		  int a,b,c,d,e;
+ *  		  a=0;
+ *  		  b=0;
+ *  		  ...
+ *  		  a=b=c=d=e=0;
+ *  		  int a=0, b=0, c=0, d=0, e=0;
+ *  	
  */						
 import java.text.DecimalFormat;
 public class 데이터형변환_1 {
