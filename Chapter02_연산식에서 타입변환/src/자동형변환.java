@@ -287,4 +287,5 @@ public class 자동형변환 {
 		double d=scan.nextDouble();
 		System.out.println(d);
 	}
+}
 
