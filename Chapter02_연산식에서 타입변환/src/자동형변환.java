@@ -288,4 +288,3 @@ public class 자동형변환 {
 		System.out.println(d);
 	}
 
-}
