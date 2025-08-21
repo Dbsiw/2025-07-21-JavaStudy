@@ -99,31 +99,74 @@ package com.sist.lang;
  * 	   리턴값
  * 	   예외처리 여부
  * 	   ------------------ 원형
+ * 	   => 85% / 15% 조립
+ * 
+ * 	   => 객체 소멸 / 객체 복제 / 객체 비교 / 객체 문자열
+ * 		  ---------------------------------------
  */
-import java.util.*;
+//import java.util.*;
+class Human
+{
+	String id,name;
+	public Human(String id,String name)
+	{
+		this.id=id;
+		this.name=name;
+	}
+//	@Override
+	// Object obj=new Human()
+//	public boolean equals(Object obj) {
+//		Human h=(Human)obj; // 매개변수 : Object, 리턴형 : Object => 형변환
+//		return name.equals(h.name) && id.equals(h.id);
+//	}
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return Object.hash(id,name);
+	}
+	
+	// 객체 비교
+	
+	
+}
 public class 라이브러리_5 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ArrayList<String> list=new ArrayList<String>();
-		list.add("코믹");
-		list.add("멜로");
-		list.add("드라마");
-		list.add("액션");
-		list.add("사극");
-		list.add("멜로");
-		list.add("로맨스");
-		list.add("스릴러");
-		list.add("호러");
-		list.add("범죄");
-		
-		HashSet<String> set=new HashSet<String>(list);
-		list=new ArrayList<String>(set);
-		
-		for(int i=0;i<list.size();i++)
+//	TODO Auto-generated method stub
+		Human h1=new Human("hong","홍길동");
+		Human h2=new Human("hong","홍길동");
+		System.out.println("h1="+h1);
+		System.out.println("h2="+h2);
+		System.out.println(h1.hashCode());
+		System.out.println(h2.hashCode());
+		// equals를 재정의하지 않는 경우 => 메모리 주소값 비교
+		if(h1.equals(h2))
 		{
-			
+			System.out.println("같은 사람입니다");
 		}
+		else
+		{
+			System.out.println("다른 사람입니다");
+		}
+//		ArrayList<String> list=new ArrayList<String>();
+//		list.add("코믹");
+//		list.add("멜로");
+//		list.add("드라마");
+//		list.add("액션");
+//		list.add("사극");
+//		list.add("멜로");
+//		list.add("로맨스");
+//		list.add("스릴러");
+//		list.add("호러");
+//		list.add("범죄");
+//		
+//		HashSet<String> set=new HashSet<String>(list);
+//		list=new ArrayList<String>(set);
+//		
+//		for(int i=0;i<list.size();i++)
+//		{
+//			
+//		}
 	}
 
 }
